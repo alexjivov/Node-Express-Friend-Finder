@@ -1,0 +1,23 @@
+{
+  "name": "node-express-friend-finder",
+  "version": "1.0.0",
+  "description": "Compatibility-based \"FriendFinder\" application -- basically a dating app. This is a full-stack site that takes in results from users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexjivov/node-express-friend-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexjivov/node-express-friend-finder/issues"
+  },
+  "homepage": "https://github.com/alexjivov/node-express-friend-finder#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
