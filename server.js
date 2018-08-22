@@ -17,8 +17,8 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 
 // THE ROUTES - Maps to where the server sends people when users input data
-require('./app/routing/apiRoutes.js')(app);
-require('./app/routing/htmlRoutes.js')(app);
+require('./routing/apiRoutes.js')(app);
+require('./routing/htmlRoutes.js')(app);
 
 // APP LISTENER - Starts the server
 app.listen(PORT, function() {

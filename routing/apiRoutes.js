@@ -1,6 +1,6 @@
 // DATA - linking routes to data sources (i.e. friends js)
 
-var friends = require ('../data/friends.js'); // links to friends.js
+var friends = require ('../app/data/friends.js'); // links to friends.js
 
 // ROUTING - set up the routes
 
