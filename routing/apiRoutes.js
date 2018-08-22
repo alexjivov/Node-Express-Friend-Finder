@@ -38,6 +38,34 @@ app.post('/api/friends', function(req,res) {
 
     // Loop for possible matches in database
     for (var i=0; i < friends.length; i++) {
-        
+
+        console.log(friends[i].name);
+        totalDifference = 0;
+
+        //Loop through all friend scores
+        for (var j=0; j < friends[i].scores[j]; j++){
+
+        // Calculations for difference between scores and sum
+        totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+
+        //If difference sum is LESS then the difference of current best...
+        if(totalDifference <= bestMatch.friendDifference) {
+
+            //...Reset bestMatch to be the new friend
+            bestMatch.name = friends[i].name;
+            bestMatch.photo = friends[i].photo;
+            bestMatch.friendDifference = totalDifference;
+        }
     }
+}
+
+//Save user's data to database AFTER checking
+// If you don't check you will always be your own best friend
+friends.push(userData);
+
+//Return JSON with bestMatch for use in the HTML 
+res.json(bestMatch);
+
+});
+
 }
